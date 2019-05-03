@@ -1,0 +1,41 @@
+{
+  "name": "fsharp-fsl-fsy",
+  "displayName": "FSharp fsl and fsy",
+  "description": "FSharp .fsl and .fsy highlighting",
+  "version": "0.0.1",
+  "publisher": "mnxn",
+  "icon": "images/colour-icon.png",
+  "engines": {
+    "vscode": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnxn/vscode-fsharp-fsl-fsy"
+  },
+  "contributes": {
+    "languages": [{
+        "id": "fslex",
+        "aliases": ["FsLex"],
+        "extensions": [".fsl"],
+        "configuration": "./fslex.configuration.json"
+      },
+      {
+        "id": "fsyacc",
+        "aliases": ["FsYacc"],
+        "extensions": [".fsy"],
+        "configuration": "./fsyacc.configuration.json"
+      }
+    ],
+    "grammars": [{
+        "language": "fslex",
+        "scopeName": "source.fslex",
+        "path": "./syntaxes/FsLex.tmLanguage"
+      },
+      {
+        "language": "fsyacc",
+        "scopeName": "source.fsyacc",
+        "path": "./syntaxes/FsYacc.tmLanguage"
+      }
+    ]
+  }
+}
